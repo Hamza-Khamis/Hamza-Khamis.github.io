@@ -16,8 +16,7 @@ This project showcases my skills, projects, and experience as a Penetration Test
 
 
 ## 🔗 Live Demo
-Check out the live version here: [Portfolio Website](https://username.github.io/portfolio)
-
+Check out the live version here: https://hamza-khamis.github.io/
 ## 📬 Contact
 If you’d like to get in touch, feel free to reach out:  
 - Email: hamza99533@gmail.com 
