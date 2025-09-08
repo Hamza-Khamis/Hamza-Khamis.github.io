@@ -12,7 +12,7 @@
     <meta name="author" content="Hamza Khamis">
     <title>Hamza Khamis | Cybersecurity & IT Portfolio</title>
     <!-- main stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stychat.css">
     <!-- icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <!-- Open Graph -->
@@ -263,7 +263,19 @@
         </div>
     </footer>
 
+    <!-- Initialize Typed.js (runs after typed.js is loaded because scripts are deferred) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.Typed) {
+                new Typed('#typed', {
+                    strings: ["IT Support Engineer", "Penetration Tester", "Red Teamer", "CTF Player", "Cybersecurity Engineer"],
+                    typeSpeed: 50,
+                    backSpeed: 40,
+                    loop: true
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
-
