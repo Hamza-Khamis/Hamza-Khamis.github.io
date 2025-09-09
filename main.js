@@ -1,4 +1,14 @@
-        document.addEventListener('DOMContentLoaded', function () {
+const togg = document.querySelector('.menu-toggle');
+const header = document.querySelector('.header');
+
+if(togg && header){
+  togg.addEventListener('click', () => {
+    togg.classList.toggle('open');
+    header.classList.toggle('nav-open');
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
             if (window.Typed) {
                 // التايبينغ الخاص بالـ Home
                 new Typed('#typed', {
@@ -27,5 +37,6 @@
                 }
             });
         });
+
 
 
