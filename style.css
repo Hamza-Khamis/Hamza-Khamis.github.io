@@ -587,3 +587,149 @@ textarea:focus {
   transform: translateX(4px);
 }
 
+
+/* ============================ Skills Section ============================ */
+.skills {
+  padding: 6rem 1rem;
+  text-align: center;
+}
+
+.skills .sub-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--text);
+}
+
+.skills .sub-title span {
+  color: var(--red-600);
+  text-shadow: 0 0 10px rgba(230, 57, 70, 0.6);
+}
+
+/* ===== Technical Skills (Progress Bars) ===== */
+.technical-skills {
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bar {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(230, 57, 70, 0.2);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.bar.reveal {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.bar:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(230, 57, 70, 0.3);
+}
+
+.bar .info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.progress-line {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-line span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--red-600), var(--red-900));
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(230, 57, 70, 0.6);
+}
+
+/* ===== Professional Skills (Radial Bars) ===== */
+.professional-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.radial-bar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.radial-bar.reveal {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.radial-bar svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progress-bar {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 15;
+}
+
+.path {
+  fill: none;
+  stroke: var(--red-600);
+  stroke-width: 15;
+  stroke-dasharray: 502; /* 2πr where r=80 */
+  stroke-dashoffset: 502;
+  transition: stroke-dashoffset 1.2s ease;
+}
+
+.radial-bar.reveal .path {
+  stroke-dashoffset: calc(502 - (502 * 90) / 100); /* حسب النسبة */
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--red-600);
+  text-shadow: 0 0 6px rgba(230, 57, 70, 0.6);
+}
+
+.text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+
