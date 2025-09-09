@@ -8,7 +8,7 @@ if(togg && header){
   });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function () {
             if (window.Typed) {
                 // التايبينغ الخاص بالـ Home
                 new Typed('#typed', {
@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         });
+
 
 
 
