@@ -732,4 +732,117 @@ textarea:focus {
   color: var(--text);
 }
 
+/* ============================ Experience Section ============================ */
+.experience {
+  padding: 6rem 1rem;
+  text-align: center;
+}
+
+.experience .sub-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--text);
+}
+
+.experience .sub-title span {
+  color: var(--red-600);
+  text-shadow: 0 0 10px rgba(230, 57, 70, 0.6);
+}
+
+/* list layout */
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* card base */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(230, 57, 70, 0.2);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.card.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(230, 57, 70, 0.08), transparent 70%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.25);
+}
+
+/* title */
+.cardtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--red-600);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cardtitle i {
+  font-size: 1.4rem;
+  color: var(--red-900);
+}
+
+/* subtitle (role) */
+.cardsubtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+/* meta (date) */
+.cardmeta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* link */
+.card .read {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--red-600);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.card .read:hover {
+  color: #fff;
+  border-color: var(--red-600);
+}
 
