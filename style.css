@@ -404,3 +404,77 @@ textarea:focus {
   animation: fadeSlideUp 1s ease 1.2s forwards;
 }
 
+
+/* ============================ About Section ============================ */
+.about {
+  padding: 6rem 1rem;
+  background: linear-gradient(180deg, rgba(16, 0, 0, 0.98), rgba(11, 11, 11, 0.96));
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(230, 57, 70, 0.08), transparent 60%),
+              radial-gradient(circle at bottom right, rgba(139, 0, 0, 0.06), transparent 60%);
+  z-index: 0;
+}
+
+.about-text {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* العنوان الرئيسي */
+.about-text h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.about-text h2 span {
+  color: var(--red-600);
+  text-shadow: 0 0 8px rgba(230, 57, 70, 0.6);
+}
+
+/* العنوان الفرعي */
+.about-text h3 {
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
+}
+
+/* النص */
+.about-text p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+/* زر CTA */
+.about-text .btn-box {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, var(--red-600), var(--red-900));
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.about-text .btn-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.4);
+}
+
