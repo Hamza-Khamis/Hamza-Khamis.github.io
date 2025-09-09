@@ -83,7 +83,7 @@
         <section id="about" class="about" aria-label="About me">
             <div class="container about-text">
                 <h2>About <span>Me</span></h2>
-                <h3>Penetration Tester</h3>
+                <h3><span id="typed-about"></span></h3>
                 <p>Experienced and detail-oriented Penetration Tester with over 5 years of experience in IT technical
                     support and systems/network administration. Possess a strong foundation in infrastructure security,
                     vulnerability assessment, and penetration testing, backed by industry-recognized certifications in
@@ -267,8 +267,17 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (window.Typed) {
+                // التايبينغ الخاص بالـ Home
                 new Typed('#typed', {
                     strings: ["IT Support Engineer", "Penetration Tester", "Red Teamer", "CTF Player", "Cybersecurity Engineer"],
+                    typeSpeed: 50,
+                    backSpeed: 40,
+                    loop: true
+                });
+
+                // التايبينغ الخاص بالـ About
+                new Typed('#typed-about', {
+                    strings: ["Penetration Tester", "Security Researcher", "Red Team Enthusiast"],
                     typeSpeed: 50,
                     backSpeed: 40,
                     loop: true
@@ -279,6 +288,7 @@
 </body>
 
 </html>
+
 
 
 
